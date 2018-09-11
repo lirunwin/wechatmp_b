@@ -1,0 +1,254 @@
+@import '@/assets/iconfont/iconfont.css';
+:root {
+  --top-nav-height: 0px;
+}
+.avatar,
+.avatar-sm,
+.avatar-lg,
+.avatar-xl {
+  max-width: 100%;
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.avatar-sm {
+  width: 35px;
+  height: 35px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+}
+.avatar-lg {
+  width: 65px;
+  height: 65px;
+}
+.avatar-xl {
+  width: 80px;
+  height: 80px;
+}
+
+.border-top {
+  border-top: 1px solid $border-color !important;
+}
+.border-right {
+  border-right: 1px solid $border-color !important;
+}
+.border-right__list {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 1em;
+    top: 0;
+    right: 0;
+    border-right: 1px solid $border-color;
+  }
+}
+.border-bottom {
+  border-bottom: 1px solid $border-color !important;
+}
+.border-bottom-dash {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6) 60%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+}
+
+.bordered {
+  border: 1px solid $border-color !important;
+}
+
+.bg-img {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.rounded {
+  border-radius: $border-radius;
+}
+.simple-svg-wrapper {
+  width: $svg-icon-width;
+  height: $svg-icon-width;
+  .simple-svg {
+    width: inherit;
+    height: inherit;
+  }
+}
+.svg-icon {
+  width: 2em;
+  height: 2em;
+  vertical-align: middle;
+  .st1 {
+    fill: #666666;
+  }
+  .st2 {
+    fill: #cccccc;
+  }
+}
+
+.svg-xs {
+  width: $svg-icon-width * 0.75;
+  height: $svg-icon-width * 0.75;
+}
+.svg-sm {
+  width: $svg-icon-width;
+  height: $svg-icon-width;
+}
+.svg {
+  width: $svg-icon-width * 1.5;
+  height: $svg-icon-width * 1.5;
+}
+.svg-lg {
+  width: $svg-icon-width * 2;
+  height: $svg-icon-width * 2;
+}
+.svg-grey {
+  opacity: 0.47;
+  path.st0 {
+    fill: $white;
+  }
+}
+.text-truncate {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.text-muted {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+.icon--text {
+  font-size: 1.25em !important;
+  margin-right: 0.5em;
+  + .icon--text {
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.flex-auto,
+.d-flex .flex-auto {
+  flex: 0 0 auto !important;
+}
+.flex-1 {
+  flex: 1;
+}
+.input-rtl {
+  &.input,
+  input {
+    text-align: right;
+  }
+}
+.text-rtl {
+  direction: rtl;
+}
+input[type='number'] {
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+a {
+  text-decoration: none;
+}
+
+.textarea-thin {
+  &.v-text-field--outline .v-input__slot {
+    border-width: 1px !important;
+  }
+  &.v-text-field--outline:not(.v-input--is-focused) .v-input__slot:hover {
+    border-width: 1px !important;
+  }
+}
+.image--bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.h-100 {
+  height: 100%;
+}
+.min-h-100 {
+  min-height: 100%;
+}
+.w-100 {
+  width: 100%;
+}
+button img {
+  width: 75px;
+}
+.line-height-0 {
+  line-height: 0;
+}
+.line-height-1 {
+  line-height: 1.5em;
+}
+.cart::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: '';
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.rich-text {
+  white-space: pre-wrap;
+}
+.map-view {
+  width: 100%;
+  height: 200px;
+}
+.btn-fancy {
+  border: 0;
+  background-color: $primary;
+  box-shadow: 0 0 0 6px rgba($primary, 0.6), 0 0 0 12px rgba($primary, 0.3);
+  border-radius: 50%;
+  &.btn-fancy-disabled {
+    background-color: $secondary;
+    box-shadow: 0 0 0 6px rgba($secondary, 0.6), 0 0 0 12px rgba($secondary, 0.3);
+  }
+}
+.sticky-to-top {
+  position: relative;
+  z-index: 1;
+  .v-tabs__bar {
+    position: sticky;
+    top: $top-nav-height;
+    z-index: 3;
+  }
+}
+.v-tabs__item.v-tabs__item--active {
+  color: $primary;
+}
+.iconfont {
+  vertical-align: middle;
+}
+.border-left-radius-none.v-btn {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.border-right-radius-none.v-btn {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.v-btn__content {
+  line-height: 1;
+}
+.break-all,
+textarea {
+  word-break: break-all;
+}
